@@ -3,44 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K25 DEV | Vos Solutions Digitales sur Mesure</title>
+    <title>K25 DEV | Solutions Digitales sur Mesure</title>
     <style>
         body { background-color: #0b0f19; color: #f3f4f6; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
-        header { max-width: 1200px; margin: 0 auto; padding: 30px 20px; display: flex; justify-content: space-between; align-items: center; }
+        header { max-width: 1100px; margin: 0 auto; padding: 30px 20px; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 26px; font-weight: bold; color: #58a6ff; letter-spacing: 1px; text-decoration: none; }
         nav a { color: #9ca3af; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.2s; }
         nav a:hover { color: #58a6ff; }
         
-        .hero { padding: 60px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
-        h1 { font-size: 42px; color: #ffffff; margin-bottom: 15px; }
+        .hero { padding: 100px 20px 60px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
+        h1 { font-size: 46px; color: #ffffff; margin-bottom: 20px; }
         .highlight { color: #58a6ff; }
-        .tagline { font-size: 18px; color: #9ca3af; margin-bottom: 40px; }
+        .tagline { font-size: 19px; color: #9ca3af; margin-bottom: 40px; line-height: 1.6; }
+        .btn { display: inline-block; background-color: #1f6feb; color: white; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: 0.2s; }
+        .btn:hover { background-color: #388bfd; }
         
-        .services-section { max-width: 1200px; margin: 0 auto; padding: 0 20px 60px 20px; }
-        .section-title { text-align: center; font-size: 28px; margin-bottom: 40px; color: #ffffff; }
+        .services-section { max-width: 1100px; margin: 0 auto; padding: 40px 20px 80px 20px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background-color: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 30px; transition: 0.2s; }
+        .card:hover { border-color: #58a6ff; }
         
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-        .card { background-color: #161b22; border: 1px solid #30363d; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); border-color: #58a6ff; }
+        .card h3 { margin-top: 0; font-size: 22px; margin-bottom: 15px; }
+        .card-python h3 { color: #3fb950; }
+        .card-web h3 { color: #58a6ff; }
+        .card-discord h3 { color: #bc8cff; }
+        .card p { color: #9ca3af; font-size: 15px; line-height: 1.6; margin: 0; }
         
-        .card-content { padding: 20px; flex-grow: 1; }
-        .card-badge { display: inline-block; padding: 4px 8px; font-size: 12px; font-weight: bold; border-radius: 4px; margin-bottom: 12px; }
-        .badge-python { background-color: rgba(63, 185, 80, 0.15); color: #3fb950; }
-        .badge-web { background-color: rgba(88, 166, 255, 0.15); color: #58a6ff; }
-        .badge-discord { background-color: rgba(188, 140, 255, 0.15); color: #bc8cff; }
-        
-        .card h3 { margin: 0 0 10px 0; font-size: 18px; color: #ffffff; line-height: 1.4; }
-        .card p { color: #9ca3af; font-size: 14px; line-height: 1.5; margin: 0; }
-        
-        .card-footer { padding: 15px 20px; background-color: #0d1117; border-top: 1px solid #30363d; display: flex; justify-content: space-between; align-items: center; }
-        .price-label { font-size: 12px; color: #8b949e; }
-        .price { font-size: 18px; font-weight: bold; color: #ffffff; }
-        .btn-card { background-color: #1f6feb; color: white; padding: 8px 14px; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: bold; }
-        .btn-card:hover { background-color: #388bfd; }
-        
-        .about { background-color: #161b22; padding: 60px 20px; text-align: center; border-top: 1px solid #30363d; }
+        .about { background-color: #161b22; padding: 80px 20px; text-align: center; border-top: 1px solid #30363d; }
         .about-content { max-width: 700px; margin: 0 auto; }
-        footer { text-align: center; padding: 30px; color: #6e7681; font-size: 14px; background-color: #0b0f19; }
+        .about h2 { color: #ffffff; font-size: 28px; margin-top: 0; }
+        .about p { color: #9ca3af; line-height: 1.7; font-size: 16px; }
+        
+        footer { text-align: center; padding: 40px; color: #6e7681; font-size: 14px; background-color: #0b0f19; }
     </style>
 </head>
 <body>
@@ -49,69 +43,35 @@
         <a href="/" class="logo">K25 DEV</a>
         <nav>
             <a href="/">Accueil</a>
-            <a href="/contact">Commander</a>
+            <a href="/contact">Discuter d'un projet</a>
         </nav>
     </header>
 
     <div class="hero">
-        <h1>Vos projets tech et data <span class="highlight">clés en main</span>.</h1>
-        <p class="tagline">Scripts Python, extraction de données, correction de bugs web et serveurs Discord : nous donnons vie à vos besoins.</p>
+        <h1>Simplifiez votre transition vers le <span class="highlight">digital</span>.</h1>
+        <p class="tagline">Nous combinons le développement Python, la création web et l'architecture Discord pour concevoir des outils sur mesure adaptés à vos besoins.</p>
+        <a href="/contact" class="btn">Nous contacter</a>
     </div>
 
     <div class="services-section">
-        <h2 class="section-title">Nos Services & Prestations</h2>
         <div class="services-grid">
             
-            <!-- Service 1 -->
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-badge badge-python">Python / Data</div>
-                    <h3>Traitement & Organisation de données professionnelles</h3>
-                    <p>Nettoyage, tri et structuration de vos fichiers Excel et CSV compliqués via un script Python sur mesure.</p>
-                </div>
-                <div class="card-footer">
-                    <div><span class="price-label">À partir de</span><div class="price">22,04 €</div></div>
-                    <a href="/contact" class="btn-card">Commander</a>
-                </div>
+            <!-- Bloc Python -->
+            <div class="card card-python">
+                <h3>🐍 Python & Automatisation</h3>
+                <p>Extraction de données web (Scraping), nettoyage de bases de données, tri de fichiers complexes et création de scripts sur mesure pour éliminer vos tâches répétitives.</p>
             </div>
 
-            <!-- Service 2 -->
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-badge badge-python">Web Scraping</div>
-                    <h3>Extraction de données Web (Scraping)</h3>
-                    <p>Récupération automatisée des données de n'importe quel site internet pour les convertir proprement en fichier Excel ou CSV.</p>
-                </div>
-                <div class="card-footer">
-                    <div><span class="price-label">À partir de</span><div class="price">27,56 €</div></div>
-                    <a href="/contact" class="btn-card">Commander</a>
-                </div>
+            <!-- Bloc Web -->
+            <div class="card card-web">
+                <h3>🌐 Développement Web</h3>
+                <p>Correction de bugs d'affichage HTML/CSS, optimisation de l'expérience utilisateur et développement de solutions web fluides, légères et modernes.</p>
             </div>
 
-            <!-- Service 3 -->
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-badge badge-web">HTML & CSS</div>
-                    <h3>Correction de bugs HTML & CSS</h3>
-                    <p>Résolution rapide et efficace de vos bugs d'affichage sur vos sites internet pour un rendu parfait sur mobile et PC.</p>
-                </div>
-                <div class="card-footer">
-                    <div><span class="price-label">À partir de</span><div class="price">27,56 €</div></div>
-                    <a href="/contact" class="btn-card">Commander</a>
-                </div>
-            </div>
-
-            <!-- Service 4 -->
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-badge badge-discord">Discord</div>
-                    <h3>Configuration de serveur Discord PRO</h3>
-                    <p>Création complète ou amélioration de votre serveur : sécurité anti-raid, permissions, rôles automatiques et design soigné.</p>
-                </div>
-                <div class="card-footer">
-                    <div><span class="price-label">À partir de</span><div class="price">55,10 €</div></div>
-                    <a href="/contact" class="btn-card">Commander</a>
-                </div>
+            <!-- Bloc Discord -->
+            <div class="card card-discord">
+                <h3>💬 Écosystème Discord</h3>
+                <p>Création complète et restructuration de serveurs professionnels. Configuration des permissions, sécurisation anti-raid avancée et intégration de bots d'automatisation.</p>
             </div>
 
         </div>
@@ -119,8 +79,8 @@
 
     <div class="about">
         <div class="about-content">
-            <h2 style="color: #ffffff; margin-top: 0;">Besoin d'un projet sur mesure ?</h2>
-            <p>Que vous soyez un particulier, un créateur ou une entreprise, l'équipe de <strong>K25 DEV</strong> vous accompagne avec des tarifs transparents et une livraison rapide.</p>
+            <h2>À propos de K25 DEV</h2>
+            <p>Nous sommes un binôme de développeurs indépendants. Notre philosophie est simple : mettre la technique au service de vos idées. Que vous cherchiez à automatiser un processus métier ou à bâtir une communauté solide, nous créons l'outil dont vous avez besoin.</p>
         </div>
     </div>
 
