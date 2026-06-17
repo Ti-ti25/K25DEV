@@ -11,30 +11,43 @@
         nav a { color: #9ca3af; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.2s; }
         nav a:hover { color: #58a6ff; }
         
-        .hero { padding: 100px 20px 60px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
+        .hero { padding: 80px 20px 40px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
         h1 { font-size: 46px; color: #ffffff; margin-bottom: 20px; }
         .highlight { color: #58a6ff; }
         .tagline { font-size: 19px; color: #9ca3af; margin-bottom: 40px; line-height: 1.6; }
         .btn { display: inline-block; background-color: #1f6feb; color: white; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: 0.2s; }
         .btn:hover { background-color: #388bfd; }
         
-        .services-section { max-width: 1100px; margin: 0 auto; padding: 40px 20px 80px 20px; }
+        .services-section { max-width: 1100px; margin: 0 auto; padding: 20px 20px 60px 20px; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .card { background-color: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 30px; transition: 0.2s; }
         .card:hover { border-color: #58a6ff; }
-        
         .card h3 { margin-top: 0; font-size: 22px; margin-bottom: 15px; }
         .card-python h3 { color: #3fb950; }
         .card-web h3 { color: #58a6ff; }
         .card-discord h3 { color: #bc8cff; }
         .card p { color: #9ca3af; font-size: 15px; line-height: 1.6; margin: 0; }
         
-        .about { background-color: #161b22; padding: 80px 20px; text-align: center; border-top: 1px solid #30363d; }
+        /* Section STACK TECHNIQUE */
+        .stack-section { text-align: center; padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
+        .stack-logos { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 25px; }
+        .tech-badge { background: #161b22; border: 1px solid #30363d; padding: 10px 20px; border-radius: 20px; font-size: 14px; font-weight: bold; }
+        
+        /* Section PROCESS */
+        .process-section { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 30px; }
+        .step { background: rgba(22, 27, 34, 0.5); border-left: 4px solid #1f6feb; padding: 20px; border-radius: 0 8px 8px 0; }
+        .step-num { font-size: 14px; color: #58a6ff; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .step h4 { margin: 5px 0 10px 0; color: white; font-size: 18px; }
+        .step p { margin: 0; color: #9ca3af; font-size: 14.5px; line-height: 1.5; }
+
+        .about { background-color: #161b22; padding: 80px 20px; text-align: center; border-top: 1px solid #30363d; margin-top: 40px; }
         .about-content { max-width: 700px; margin: 0 auto; }
         .about h2 { color: #ffffff; font-size: 28px; margin-top: 0; }
         .about p { color: #9ca3af; line-height: 1.7; font-size: 16px; }
         
         footer { text-align: center; padding: 40px; color: #6e7681; font-size: 14px; background-color: #0b0f19; }
+        @media (max-width: 768px) { h1 { font-size: 34px; } }
     </style>
 </head>
 <body>
@@ -47,36 +60,66 @@
         </nav>
     </header>
 
+    <!-- HERO SECTION -->
     <div class="hero">
         <h1>Simplifiez votre transition vers le <span class="highlight">digital</span>.</h1>
         <p class="tagline">Nous combinons le développement Python, la création web et l'architecture Discord pour concevoir des outils sur mesure adaptés à vos besoins.</p>
         <a href="/contact" class="btn">Nous contacter</a>
     </div>
 
+    <!-- SERVICES SECTION -->
     <div class="services-section">
         <div class="services-grid">
-            
-            <!-- Bloc Python -->
             <div class="card card-python">
                 <h3>🐍 Python & Automatisation</h3>
                 <p>Extraction de données web (Scraping), nettoyage de bases de données, tri de fichiers complexes et création de scripts sur mesure pour éliminer vos tâches répétitives.</p>
             </div>
-
-            <!-- Bloc Web -->
             <div class="card card-web">
                 <h3>🌐 Développement Web</h3>
                 <p>Correction de bugs d'affichage HTML/CSS, optimisation de l'expérience utilisateur et développement de solutions web fluides, légères et modernes.</p>
             </div>
-
-            <!-- Bloc Discord -->
             <div class="card card-discord">
                 <h3>💬 Écosystème Discord</h3>
                 <p>Création complète et restructuration de serveurs professionnels. Configuration des permissions, sécurisation anti-raid avancée et intégration de bots d'automatisation.</p>
             </div>
-
         </div>
     </div>
 
+    <!-- AJOUT 1 : STACK TECHNIQUE -->
+    <div class="stack-section">
+        <h3 style="color: white; font-size: 24px; margin: 0;">Les technologies que nous maîtrisons</h3>
+        <div class="stack-logos">
+            <span class="tech-badge" style="color: #3fb950; border-color: #3fb950;">🐍 Python</span>
+            <span class="tech-badge" style="color: #58a6ff; border-color: #58a6ff;">🌐 HTML5 / CSS3 / JS</span>
+            <span class="tech-badge" style="color: #bc8cff; border-color: #bc8cff;">💬 Discord.js / Discord.py</span>
+            <span class="tech-badge" style="color: #ffa657; border-color: #ffa657;">📊 Excel / CSV / JSON</span>
+            <span class="tech-badge" style="color: #f778ba; border-color: #f778ba;">🚀 Node.js / Express</span>
+        </div>
+    </div>
+
+    <!-- AJOUT 2 : LE PROCESS DE TRAVAIL -->
+    <div class="process-section">
+        <h3 style="color: white; font-size: 24px; text-align: center; margin: 0;">Comment nous travaillons ensemble ?</h3>
+        <div class="process-grid">
+            <div class="step">
+                <div class="step-num">Étape 01</div>
+                <h4>Le Briefing 📝</h4>
+                <p>Vous nous expliquez votre besoin (sur Discord ou par Mail). Nous validons ensemble un cahier des charges clair pour avancer sans mauvaise surprise.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">Étape 02</div>
+                <h4>Le Développement 💻</h4>
+                <p>Mon pote et moi codons votre solution. On reste en contact tout au long du process pour vous montrer l'avancement et ajuster selon vos retours.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">Étape 03</div>
+                <h4>Livraison & Suivi 🚀</h4>
+                <p>On vous livre un outil clé en main et propre. On vous explique comment l'installer ou l'utiliser, et on reste disponibles en cas de besoin.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
     <div class="about">
         <div class="about-content">
             <h2>À propos de K25 DEV</h2>
