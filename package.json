@@ -1,0 +1,12 @@
+{
+  "name": "k25-dev-site",
+  "version": "1.0.0",
+  "description": "Site vitrine de la micro-entreprise K25 DEV",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
